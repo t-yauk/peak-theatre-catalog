@@ -5,6 +5,7 @@
 
 h1{
 	font-size:5em;
+	line-height: 1;
 
 }
 
@@ -14,13 +15,91 @@ h1 .subtitle{
 	font-size:0.5em;
 }
 
+.top{
+	position:fixed;
+	display:inline-block;
+	opacity: 0;
+	top:80%;
+	width:100px;
+	height:100px;
+	background: #009cdd;
+	color: #fff;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 15px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.top:hover{
+	background: #0076a2;
+}
+
+@media screen and (min-width: 1113px) {
+	.top{
+		left:91%;
+	}
+}
+
+@media screen and (max-width: 1112px) {
+	.top{
+		left:70%;
+	}
+}
+
+#arrow-icon{
+	display:inline-block;
+	position: relative;
+	font-size:5em;
+	font-weight:bold;
+	text-align: center;
+	vertical-align: middle;
+	top: 10px;
+}
+
 .filter-bar{
 	display:block;
 	position: sticky;
 	width:100%;
 	height:100px;
-	background: #ececec;
+	background: #efefef;
 	filter: drop-shadow(0 0 0.75rem rgba(0,0,0,0.3));
+}
+
+.pk-dropdown{
+	display:inline-block;
+	position: relative;
+	width:200px;
+	height:100px;
+	padding:10px;
+	font-size:1.5em;
+	font-weight: bold;
+	text-align:center;
+	background: #efefef;
+	border-style: solid;
+  	border-color: #d1d1d1;
+  	border-width: 0 0 0 1px;
+  	cursor:pointer;
+}
+
+.submit-button{
+	display:inline-block;
+	position: relative;
+	width:200px;
+	height:100px;
+	padding:10px;
+	font-size:1.5em;
+	font-weight: bold;
+	text-align:center;
+	text-transform:uppercase;
+	background: #efefef;
+	border-style: solid;
+  	border-color: #d1d1d1;
+  	border-width: 0 1px 0 1px;
+}
+
+.submit-button:hover{
+	background: #d1d1d1;
 }
 
 .pad-block{
@@ -62,8 +141,6 @@ h1 .subtitle{
 	}
 }
 
-
-
 .movie-block .poster{
 	display:inline-block;
 	width:200px;
@@ -97,6 +174,7 @@ h1 .subtitle{
 	font-size:1.4em;
 	font-weight:bold;
 	color: #0076a2;
+	line-height: 1;
 }
 
 .movie-block .title{
@@ -106,8 +184,15 @@ h1 .subtitle{
 	line-height:1;
 }
 
+.movie-block .subtitle{
+	font-size:0.8em;
+	font-weight:lighter;
+	color: #333638;
+}
+
 .movie-block .description{
 	font-size:1.25em;
+	padding-top:10px;
 }
 
 .movie-block .duration{
@@ -118,10 +203,16 @@ h1 .subtitle{
 .movie-block .genres{
 	font-size:1.2em;
 	font-weight:bold;
-	color: #d94329;
 }
 
-
+.genre{
+	display:inline-block;
+	background: #d94329;
+	color: #fff;
+	padding:2px 10px;
+	text-transform: uppercase;
+	border-radius: 5px;
+}
 
 
 
