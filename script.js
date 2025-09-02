@@ -1,5 +1,5 @@
 var genre = "";
-var genre_filter = "comedy";
+var genre_filter = "all";
 var found_movies = 0;
 
 function load_catalog(){
