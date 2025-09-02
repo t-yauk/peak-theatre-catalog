@@ -1,6 +1,7 @@
 var genre = "";
 var genre_filter = "all";
 var found_movies = 0;
+var subtitle = true;
 
 function load_catalog(){
 
@@ -28,6 +29,7 @@ function genreFilter(){
   genre_filter = document.getElementById("genre_list").value;
   console.log(genre_filter);
   document.getElementById("section").innerHTML = "";
+  document.getElementById("featured-players").innerHTML = "";
   found_movies = 0;
   populate();
 }
@@ -79,6 +81,8 @@ function populateHours(filter_selection){
 
 
 function all_genres(obj){
+
+  featured_players(obj);
 
   const section = document.querySelector("section");
   const myArticle = document.createElement("article");
@@ -1368,6 +1372,48 @@ function western(obj){
   }
 
   document.getElementById("catalog_count").innerHTML = found_movies + " Movies Found";
+
+}
+
+
+function featured_players(obj){
+  const section = document.querySelector("featured-players");
+  const myArticle = document.createElement("article");
+  const catalog = document.createElement("p");
+
+  const featuredBlock = document.createElement('span');
+  featuredBlock.classList.add('featured-heading');
+  featuredBlock.innerHTML = "The Featured Players";
+  document.getElementById("featured-players").appendChild(featuredBlock);
+
+  for(i = 0;i < obj.length;i++){
+    
+    if((obj[i].genre).length == 1){
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span>";
+    }else if((obj[i].genre).length == 2){
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span><span style='display:inline-block;padding:0px 5px'></span><span class='genre'>" + (obj[i].genre[1]) + "</span>";
+    }
+
+    if((obj[i].subtitle) !== undefined){
+      console.log("No Subtitle Found");
+      subtitle = false;
+    }
+
+    if((obj[i].featured) == "true"){
+      const padBlock = document.createElement('span');
+      padBlock.classList.add('pad-block');
+      const newBlock = document.createElement('div');
+      newBlock.classList.add('movie-block');
+      newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+      document.getElementById("featured-players").appendChild(padBlock);
+      document.getElementById("featured-players").appendChild(newBlock);
+    }
+
+  }
+
+  const sectionDivide = document.createElement('span');
+  sectionDivide.classList.add('separator');
+  document.getElementById("featured-players").appendChild(sectionDivide);
 
 }
 
