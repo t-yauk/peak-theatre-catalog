@@ -483,6 +483,18 @@
 		},
 
 		{
+			"title": "Jurassic World: Rebirth",
+			"director": "Gareth Edwards",
+			"year": "2025",
+			"duration": "2h 13m",
+			"image_url": "https://m.media-amazon.com/images/M/MV5BMGM3ZmI3NzQtNzU5Yi00ZWI1LTg3YTAtNmNmNWIyMWFjZTBkXkEyXkFqcGc@._V1_FMjpg_UY3000_.jpg",
+			"description": "Five years post-Jurassic World: Dominion (2022), an expedition braves isolated equatorial regions to extract DNA from three massive prehistoric creatures for a groundbreaking medical breakthrough.",
+			"featured": "true",
+			"theatre_optimized": "true",
+			"genre": ["Action", "Sci-Fi"]
+		},
+
+		{
 			"title": "Killers Of The Flower Moon",
 			"director": "Martin Scorsese",
 			"year": "2023",
