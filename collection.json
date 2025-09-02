@@ -3,6 +3,7 @@
 
 		{
 			"title": "The Adventures Of Ichabod And Mr. Toad",
+			"director": "David Zucker, Jim Abrahams, Jerry Zucker",
 			"year": "1949",
 			"duration": "1h 8m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BZDRkODhiMTMtZDg0ZC00ZTFhLTk2MDAtMWI3ZjcxMmY1OTllXkEyXkFqcGc@._V1_FMjpg_UY2048_.jpg",
@@ -14,6 +15,7 @@
 
 		{
 			"title": "Airplane!",
+			"director": "James Algar, Clyde Geronimi, Jack Kinney",
 			"year": "1980",
 			"duration": "1h 28m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNGMxMDRhMjItMDNlZi00MDIzLWE5MDQtODljMDQ3MWM1Y2E4XkEyXkFqcGc@._V1_FMjpg_UX623_.jpg",
@@ -25,6 +27,7 @@
 
 		{
 			"title": "American Psycho",
+			"director": "Mary Harron",
 			"year": "2000",
 			"duration": "1h 42m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNzBjM2I5ZjUtNmIzNy00OGNkLWIwZDMtOTAwYWUwMzA2YjdlXkEyXkFqcGc@._V1_FMjpg_UX1012_.jpg",
@@ -36,6 +39,7 @@
 
 		{
 			"title": "An American Werewolf In London",
+			"director": "John Landis",
 			"year": "1981",
 			"duration": "1h 37m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BOWYyNmMwMTUtZjE2OC00YWQzLWJmMzctNzhmMDI1OTQwNzdhXkEyXkFqcGc@._V1_FMjpg_UY2918_.jpg",
@@ -47,6 +51,7 @@
 
 		{
 			"title": "Anchors Aweigh",
+			"director": "George Sidney",
 			"year": "1945",
 			"duration": "2h 23m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNzFiYzI3NzUtZmJhNy00N2JlLTk4NGEtNGRlMGI5MDdjNzUzXkEyXkFqcGc@._V1_FMjpg_UY2669_.jpg",
@@ -58,6 +63,7 @@
 
 		{
 			"title": "Apocalypse Now",
+			"director": "Francis Ford Coppola",
 			"year": "1979",
 			"duration": "3h 2m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BMjY1ZmY0ZGMtYWExOC00NTQyLTk2NWUtYTI0YjViZGNiMTFhXkEyXkFqcGc@._V1_FMjpg_UY3000_.jpg",
@@ -69,6 +75,7 @@
 
 		{
 			"title": "Badlands",
+			"director": "Terrence Malick",
 			"year": "1973",
 			"duration": "1h 35m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BN2U3ZjE1ZjUtYTRkMy00NTJiLTgyNzktMmE1OTUzYmRlOTUzXkEyXkFqcGc@._V1_FMjpg_UY2265_.jpg",
@@ -80,6 +87,7 @@
 
 		{
 			"title": "Barry Lyndon",
+			"director": "Stanley Kubrick",
 			"year": "1975",
 			"duration": "3h 7m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNmM2MGQ5Y2UtYzA3ZC00ZDJlLTkwNDYtMjBmZGExZDJiN2RlXkEyXkFqcGc@._V1_FMjpg_UX658_.jpg",
@@ -91,6 +99,7 @@
 
 		{
 			"title": "The Batman",
+			"director": "Matt Reeves",
 			"year": "2022",
 			"duration": "2h 56m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNzY3NTU5ZGUtYWU5ZS00Zjg4LTgzZGMtYTg4OTZmNGNlMjMxXkEyXkFqcGc@._V1_FMjpg_UY4096_.jpg",
@@ -102,6 +111,7 @@
 
 		{
 			"title": "Beetlejuice",
+			"director": "Tim Burton",
 			"year": "1988",
 			"duration": "1h 32m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BYjkwNzVlNDEtMTJlNy00OTdlLTljYWItM2RkZmZkYzY3YjM2XkEyXkFqcGc@._V1_FMjpg_UX1005_.jpg",
@@ -113,6 +123,7 @@
 
 		{
 			"title": "The Birdcage",
+			"director": "Mike Nichols",
 			"year": "1996",
 			"duration": "1h 58m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BMTM2NjExODYyOF5BMl5BanBnXkFtZTcwNTc0NjgyNA@@._V1_FMjpg_UX682_.jpg",
@@ -124,6 +135,7 @@
 
 		{
 			"title": "Black Narcissus",
+			"director": "Michael Powell, Emeric Pressburger",
 			"year": "1947",
 			"duration": "1h 40m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BMjRmMTQyNDEtNWM4Zi00ZTMwLTlkOGUtZTdmZDU0NTNiZTQ0XkEyXkFqcGc@._V1_FMjpg_UY3315_.jpg",
@@ -135,6 +147,7 @@
 
 		{
 			"title": "Blade Runner",
+			"director": "Ridley Scott",
 			"year": "1982",
 			"duration": "1h 57m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BOWQ4YTBmNTQtMDYxMC00NGFjLTkwOGQtNzdhNmY1Nzc1MzUxXkEyXkFqcGc@._V1_FMjpg_UY4250_.jpg",
@@ -146,6 +159,7 @@
 
 		{
 			"title": "Blade Runner 2049",
+			"director": "Denis Villeneuve",
 			"year": "2017",
 			"duration": "2h 43m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNzA1Njg4NzYxOV5BMl5BanBnXkFtZTgwODk5NjU3MzI@._V1_FMjpg_UY2048_.jpg",
@@ -157,6 +171,7 @@
 
 		{
 			"title": "Blood Simple",
+			"director": "Ethan Coen, Joel Coen",
 			"year": "1984",
 			"duration": "1h 39m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BZjRmYjYzNjktNzBlOC00NThmLTk5Y2EtZTgxMjUxYmIyMzA3XkEyXkFqcGc@._V1_FMjpg_UY3508_.jpg",
@@ -168,6 +183,7 @@
 
 		{
 			"title": "Blow Out",
+			"director": "Brian De Palma",
 			"year": "1981",
 			"duration": "1h 47m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNzkzODYxZTYtYWJkMS00NTZhLTk1ZTEtMWM2ZTU3MjE1ZTViXkEyXkFqcGc@._V1_FMjpg_UX805_.jpg",
@@ -179,6 +195,7 @@
 
 		{
 			"title": "Brazil",
+			"director": "Terry Gilliam",
 			"year": "1985",
 			"duration": "2h 22m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNjI1MTAzNmYtYzQ3Zi00ZWE0LWJiZmQtY2UwZWU3ZTE4OGQ3XkEyXkFqcGc@._V1_FMjpg_UX500_.jpg",
@@ -190,6 +207,7 @@
 
 		{
 			"title": "Cabaret",
+			"director": "Bob Fosse",
 			"year": "1972",
 			"duration": "2h 4m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BZGExNGNlNmQtZTlmNy00MmZkLWE1MjgtZGYwODY0ZDI1YzMwXkEyXkFqcGc@._V1_FMjpg_UY3000_.jpg",
@@ -201,6 +219,7 @@
 
 		{
 			"title": "Casablanca",
+			"director": "Michael Curtiz",
 			"year": "1942",
 			"duration": "1h 42m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BMTY0OGExYmUtM2JiNy00NmIzLTlkYWItY2VkOTRhZTBiMjgyXkEyXkFqcGc@._V1_FMjpg_UY2500_.jpg",
@@ -212,6 +231,7 @@
 
 		{
 			"title": "Casino Royale",
+			"director": "Martin Campbell",
 			"year": "2006",
 			"duration": "2h 24m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BMWQ1ZDM4NDktMWY0NC00MjcxLWJlMDMtNmE2MGVhYzRjMWQ0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
@@ -223,6 +243,7 @@
 
 		{
 			"title": "Challengers",
+			"director": "Luca Guadagnino",
 			"year": "2024",
 			"duration": "2h 11m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BZTcyZGIyODctZGJhOS00MWUyLWI5ZWEtMjg4YzhkMDczMDBhXkEyXkFqcGc@._V1_FMjpg_UY4096_.jpg",
@@ -234,6 +255,7 @@
 
 		{
 			"title": "Charade",
+			"director": "Stanley Donen",
 			"year": "1963",
 			"duration": "1h 53m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BM2FiMmFkNWItNzNmOS00MWQ3LWExNTUtZWJkOTBmNzg0ZWRjXkEyXkFqcGc@._V1_FMjpg_UX1026_.jpg",
@@ -245,6 +267,7 @@
 
 		{
 			"title": "Citizen Kane",
+			"director": "Orson Welles",
 			"year": "1941",
 			"duration": "1h 59m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BYjk1ZDJlMmUtOWQ0Zi00MDM5LTk1OGYtODczNjFmMGYwZGVkXkEyXkFqcGc@._V1_FMjpg_UX1100_.jpg",
@@ -256,6 +279,7 @@
 
 		{
 			"title": "Original Cast Album: Company",
+			"director": "D. A. Pennebaker",
 			"year": "1970",
 			"duration": "1 hour",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BOGJiYjgwODEtMjMzNC00YzMxLWI0MTItOTdlMTI4ZjdkMTAyXkEyXkFqcGc@._V1_FMjpg_UX1063_.jpg",
@@ -267,6 +291,7 @@
 
 		{
 			"title": "Django Unchained",
+			"director": "Quentin Tarantino",
 			"year": "2012",
 			"duration": "2h 45m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BMjIyNTQ5NjQ1OV5BMl5BanBnXkFtZTcwODg1MDU4OA@@._V1_FMjpg_UY2048_.jpg",
@@ -278,6 +303,7 @@
 
 		{
 			"title": "Do The Right Thing",
+			"director": "Spike Lee",
 			"year": "1989",
 			"duration": "2 hours",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BODA2MjU1NTI1MV5BMl5BanBnXkFtZTgwOTU4ODIwMjE@._V1_FMjpg_UY4878_.jpg",
@@ -289,6 +315,7 @@
 
 		{
 			"title": "Eddington",
+			"director": "Ari Aster",
 			"year": "2025",
 			"duration": "2h 25m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNmM0Yzc1ZjAtZTg4My00NDI3LWEwMzAtY2ZkNzMxMWMwOTFlXkEyXkFqcGc@._V1_FMjpg_UY3600_.jpg",
@@ -300,6 +327,7 @@
 
 		{
 			"title": "Edward Scissorhands",
+			"director": "Tim Burton",
 			"year": "1990",
 			"duration": "1h 45m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BODJhODczYjUtYzdkMy00Yjc4LTllNWMtZTQ3MDZlYWZjYWEzXkEyXkFqcGc@._V1_FMjpg_UY2915_.jpg",
@@ -311,6 +339,7 @@
 
 		{
 			"title": "Excalibur",
+			"director": "John Boorman",
 			"year": "1981",
 			"duration": "2h 21m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BMTI0ZTZlNGMtNjhmNi00OGFiLTkzYjEtZmZiODgxMzI3YTE0XkEyXkFqcGc@._V1_FMjpg_UY2930_.jpg",
@@ -322,6 +351,7 @@
 
 		{
 			"title": "The Exorcist",
+			"director": "William Friedkin",
 			"year": "1973",
 			"duration": "2h 2m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BZjg3YjE4ZjAtYTdmYS00ZTBkLWE1ZjgtNzAzODUwNzRiYjlmXkEyXkFqcGc@._V1_FMjpg_UY2239_.jpg",
@@ -333,6 +363,7 @@
 
 		{
 			"title": "F1",
+			"director": "Joseph Kosinski",
 			"year": "2025",
 			"duration": "2h 35m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BZTYwYjJhNzYtY2ZiZS00ZmYxLWJkZjctYjRlNGIxYjI3ZTU0XkEyXkFqcGc@._V1_FMjpg_UY3000_.jpg",
@@ -344,6 +375,7 @@
 
 		{
 			"title": "The Gate",
+			"director": "Tibor Takács",
 			"year": "1987",
 			"duration": "1h 25m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BZDQxMDA2YmItNzk0My00ZmM5LTg1NTQtNzZmZmRkOTM1ZWFlXkEyXkFqcGc@._V1_FMjpg_UY2753_.jpg",
@@ -355,6 +387,7 @@
 
 		{
 			"title": "Grease",
+			"director": "Randal Kleiser",
 			"year": "1978",
 			"duration": "1h 45m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNGY0NzE0ZTctN2YzNC00M2IwLWI0OWYtMTAwZWU2NjZhMTQwXkEyXkFqcGc@._V1_FMjpg_UX932_.jpg",
@@ -367,6 +400,7 @@
 		{
 			"title": "Hearts of Darkness",
 			"subtitle": "A Filmmakers Apocalypse",
+			"director": "Eleanor Coppola, Fax Bahr, George Hickenlooper",
 			"year": "1991",
 			"duration": "1h 37m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNjMxMWI2NTItYTAzNC00MGRhLTlkOGItZjA0YmFmNzE5MmU0XkEyXkFqcGc@._V1_FMjpg_UX580_.jpg",
@@ -378,6 +412,7 @@
 
 		{
 			"title": "Hot Dog...The Movie",
+			"director": "Peter Markle",
 			"year": "1984",
 			"duration": "1h 36m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BODk3MzRlMDItOGFhZC00MjA5LWE5MDgtYWI5OGM4ZTllMjQ5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
@@ -389,6 +424,7 @@
 
 		{
 			"title": "Hurry Up Tomorrow",
+			"director": "Trey Edward Shults",
 			"year": "2025",
 			"duration": "1h 45m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNDQ2MGIyNDQtYjVhOS00ZjI1LWFmYzctMWI2MGZhZGFhZWM4XkEyXkFqcGc@._V1_FMjpg_UY3000_.jpg",
@@ -400,6 +436,7 @@
 
 		{
 			"title": "Inglourious Basterds",
+			"director": "Quentin Tarantino",
 			"year": "2009",
 			"duration": "2h 33m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BODZhMWJlNjYtNDExNC00MTIzLTllM2ItOGQ2NGVjNDQ3MzkzXkEyXkFqcGc@._V1_FMjpg_UY3000_.jpg",
@@ -411,6 +448,7 @@
 
 		{
 			"title": "Interstellar",
+			"director": "Christopher Nolan",
 			"year": "2014",
 			"duration": "2h 49m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_FMjpg_UY3600_.jpg",
@@ -422,6 +460,7 @@
 
 		{
 			"title": "The Island Of Dr. Moreau",
+			"director": "Don Taylor",
 			"year": "1977",
 			"duration": "1h 39m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BMzViZmExNTYtZWRkYi00ODE2LWJjMGUtYjAwNTY4NTNkZWVmXkEyXkFqcGc@._V1_FMjpg_UY2265_.jpg",
@@ -433,6 +472,7 @@
 
 		{
 			"title": "It's A Wonderful Life",
+			"director": "Frank Capra",
 			"year": "1946",
 			"duration": "2h 10m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BMDM4OWFhYjEtNTE5Yy00NjcyLTg5N2UtZDQwNDZlYjlmNDU5XkEyXkFqcGc@._V1_FMjpg_UY1890_.jpg",
@@ -444,6 +484,7 @@
 
 		{
 			"title": "Killers Of The Flower Moon",
+			"director": "Martin Scorsese",
 			"year": "2023",
 			"duration": "3h 26m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BZWY5ZDVjNTUtODI5Yy00MjFhLWEyM2EtYzZjM2VjZTI0MTBjXkEyXkFqcGc@._V1_FMjpg_UY3000_.jpg",
@@ -455,6 +496,7 @@
 
 		{
 			"title": "King Kong",
+			"director": "Peter Jackson",
 			"year": "2005",
 			"duration": "3 hours",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BMWY0NWE0ZjUtNjRlOS00ZDViLTgxNTQtMGMwN2FhNDY1YTg2XkEyXkFqcGc@._V1_FMjpg_UY3981_.jpg",
@@ -466,6 +508,7 @@
 
 		{
 			"title": "Late Night With The Devil",
+			"director": "Cameron Cairnes, Colin Cairnes",
 			"year": "2023",
 			"duration": "1h 35m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BMGE4MmZhMTItZmI0Ni00ZjgyLTliNDgtZGZmODJlNjM2OTM0XkEyXkFqcGc@._V1_FMjpg_UY12000_.jpg",
@@ -477,6 +520,7 @@
 
 		{
 			"title": "Lawrence Of Arabia",
+			"director": "David Lean",
 			"year": "1962",
 			"duration": "3h 36m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BYjY0YTQ1OTAtYjEyNy00NTQ4LThlMTQtM2QwYTVhYWFhNjU5XkEyXkFqcGc@._V1_FMjpg_UY2767_.jpg",
@@ -488,6 +532,7 @@
 
 		{
 			"title": "The Life And Death of Colonel Blimp",
+			"director": "Michael Powell, Emeric Pressburger",
 			"year": "1943",
 			"duration": "2h 43m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNmIxZTU3MzEtZTJjNy00MzI4LTgwYmItMTdhYzNlZTU3YTQyXkEyXkFqcGc@._V1_FMjpg_UX960_.jpg",
@@ -499,6 +544,7 @@
 
 		{
 			"title": "Mad Max",
+			"director": "George Miller",
 			"year": "1979",
 			"duration": "1h 28m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BMTM4Mjg5ODEzMV5BMl5BanBnXkFtZTcwMDc3NDk0NA@@._V1_FMjpg_UX682_.jpg",
@@ -509,8 +555,8 @@
 		},
 
 		{
-			"title": "The Road Warrior",
-			"subtitle": "Mad Max 2",
+			"title": "The Road Warrior (Mad Max 2)",
+			"director": "George Miller",
 			"year": "1981",
 			"duration": "1h 35m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BYTAyNzBiZWUtMGY4YS00YzkzLWJhNGUtNTU5OThlZjZhZTYyXkEyXkFqcGc@._V1_FMjpg_UX916_.jpg",
@@ -522,6 +568,7 @@
 
 		{
 			"title": "Mad Max: Beyond Thunderdome",
+			"director": "George Miller",
 			"year": "1985",
 			"duration": "1h 47m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BMTNkOGZjMGMtNDI4Zi00ZDBjLWJhY2UtMzA2YWI1ZGI5OWVhXkEyXkFqcGc@._V1_FMjpg_UX986_.jpg",
@@ -533,6 +580,7 @@
 
 		{
 			"title": "Mad Max: Fury Road",
+			"director": "George Miller",
 			"year": "2015",
 			"duration": "2 hours",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BZDRkODJhOTgtOTc1OC00NTgzLTk4NjItNDgxZDY4YjlmNDY2XkEyXkFqcGc@._V1_FMjpg_UX675_.jpg",
@@ -545,6 +593,7 @@
 		{
 			"title": "Furiosa",
 			"subtitle": "A Mad Max Saga",
+			"director": "George Miller",
 			"year": "2024",
 			"duration": "2h 28m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNTcwYWE1NTYtOWNiYy00NzY3LWIwY2MtNjJmZDkxNDNmOWE1XkEyXkFqcGc@._V1_FMjpg_UY4096_.jpg",
@@ -556,6 +605,7 @@
 
 		{
 			"title": "The Man Who Knew Too Much",
+			"director": "Alfred Hitchcock",
 			"year": "1956",
 			"duration": "2 hours",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNDg1NzljZmMtMDU3OS00Y2E5LWE3OGEtMzM4ZjhjMmZmZTI5XkEyXkFqcGc@._V1_FMjpg_UY2923_.jpg",
@@ -567,6 +617,7 @@
 
 		{
 			"title": "Megalopolis",
+			"director": "Francis Ford Coppola",
 			"year": "2024",
 			"duration": "2h 18m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BOTQ2MTcwODgtOTg3Yi00M2RmLWEyMDQtY2IzZmRlYzM3YzhjXkEyXkFqcGc@._V1_FMjpg_UY6000_.jpg",
@@ -578,6 +629,7 @@
 
 		{
 			"title": "Modern Romance",
+			"director": "Albert Brooks",
 			"year": "1981",
 			"duration": "1h 33m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNTE4YWYyOWUtNTQxZC00MjVmLWFjNDUtZTc1YzA0MjdjMGViXkEyXkFqcGc@._V1_FMjpg_UY2260_.jpg",
@@ -589,6 +641,7 @@
 
 		{
 			"title": "Mr. Smith Goes To Washington",
+			"director": "Frank Capra",
 			"year": "1939",
 			"duration": "2h 9m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BMDU4ZjNmMjEtMjcxYi00NDAxLWFlMjQtNWIyNjg5NWUzNTdjXkEyXkFqcGc@._V1_FMjpg_UY2448_.jpg",
@@ -601,6 +654,7 @@
 		{
 			"title": "The Naked Gun",
 			"subtitle": "From The Files of Police Squad!",
+			"director": "David Zucker",
 			"year": "1988",
 			"duration": "1h 25m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BZTI5N2I1MjAtNTc0Yy00ZDIyLThkZTctMGQ5NTBhNjIwMWQ0XkEyXkFqcGc@._V1_FMjpg_UY2868_.jpg",
@@ -613,6 +667,7 @@
 		{
 			"title": "The Naked Gun 2 1/2",
 			"subtitle": "The Smell of Fear",
+			"director": "David Zucker",
 			"year": "1991",
 			"duration": "1h 25m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNjcyNmNkMTItNzkzMi00NmY5LTg5MzQtMjg2YzRmOTY0ZmQ2XkEyXkFqcGc@._V1_FMjpg_UX580_.jpg",
@@ -624,6 +679,7 @@
 
 		{
 			"title": "The New World",
+			"director": "Terrence Malick",
 			"year": "2005",
 			"duration": "2h 52m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BZGRhNmVmZDMtYzAyNy00M2YyLThkYTItNjNkYzMzYjUyZDY4XkEyXkFqcGc@._V1_FMjpg_UX1012_.jpg",
@@ -635,6 +691,7 @@
 
 		{
 			"title": "New York, New York",
+			"director": "Martin Scorsese",
 			"year": "1977",
 			"duration": "2h 43m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BODk2NmU3ZDEtMzMxNy00ZmQwLWE3NzQtOTljMDM4OWRjYmIxXkEyXkFqcGc@._V1_FMjpg_UX1027_.jpg",
@@ -646,6 +703,7 @@
 
 		{
 			"title": "The Nightmare Before Christmas",
+			"director": "Henry Selick",
 			"year": "1993",
 			"duration": "1h 16m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNmYxOTAzZWYtOGI3Yi00ODc3LTk5ZjYtZTY0MzVkZTg3YmRiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
@@ -657,6 +715,7 @@
 
 		{
 			"title": "Noah",
+			"director": "Darren Aronofsky",
 			"year": "2014",
 			"duration": "2h 18m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BMTcyNzk4Nzg4N15BMl5BanBnXkFtZTgwMTkxMDI2MDE@._V1_FMjpg_UX1013_.jpg",
@@ -668,6 +727,7 @@
 
 		{
 			"title": "The Northman",
+			"director": "Robert Eggers",
 			"year": "2022",
 			"duration": "2h 17m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BYzgwM2JiY2MtNWQ5OC00NDc1LWExMjYtYmY2YjViZmViYWM5XkEyXkFqcGc@._V1_FMjpg_UY2048_.jpg",
@@ -679,6 +739,7 @@
 
 		{
 			"title": "Nosferatu",
+			"director": "Robert Eggers",
 			"year": "2024",
 			"duration": "2h 12m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BY2FhZGE3NmEtNWJjOC00NDI1LWFhMTQtMjcxNmQzZmEwNGIzXkEyXkFqcGc@._V1_FMjpg_UX1080_.jpg",
@@ -690,6 +751,7 @@
 
 		{
 			"title": "Oppenheimer",
+			"director": "Christopher Nolan",
 			"year": "2023",
 			"duration": "3 hours",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BN2JkMDc5MGQtZjg3YS00NmFiLWIyZmQtZTJmNTM5MjVmYTQ4XkEyXkFqcGc@._V1_FMjpg_UY3454_.jpg",
@@ -701,6 +763,7 @@
 
 		{
 			"title": "Paris, Texas",
+			"director": "Wim Wenders",
 			"year": "1984",
 			"duration": "2h 27m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BYWY5YzE4YmUtZWFhMS00YjYxLWI5ZGUtNDEyNmMzNDVjMGEwXkEyXkFqcGc@._V1_FMjpg_UX1138_.jpg",
@@ -712,6 +775,7 @@
 
 		{
 			"title": "Paths Of Glory",
+			"director": "Stanley Kubrick",
 			"year": "1957",
 			"duration": "1h 28m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNmQ2NmI2ODYtMDQzNS00NzQyLTkzZjgtZmZlYTQ5MTc1OWU3XkEyXkFqcGc@._V1_FMjpg_UX1045_.jpg",
@@ -723,6 +787,7 @@
 
 		{
 			"title": "Pearl",
+			"director": "Ti West",
 			"year": "2022",
 			"duration": "1h 42m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNzk0Y2RlZjItZDUzYi00Y2JhLTk5MzMtNjgzYWFmZmUxN2FmXkEyXkFqcGc@._V1_FMjpg_UY2963_.jpg",
@@ -734,6 +799,7 @@
 
 		{
 			"title": "Peeping Tom",
+			"director": "Michael Powell",
 			"year": "1960",
 			"duration": "1h 41m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BZTkwYmQyZmMtYmZkMi00NTlhLTlhNmUtMDBmYzQ1YWIxNDBiXkEyXkFqcGc@._V1_FMjpg_UY6000_.jpg",
@@ -745,6 +811,7 @@
 
 		{
 			"title": "Pirates of The Caribbean: The Curse of The Black Pearl",
+			"director": "Gore Verbinski",
 			"year": "2003",
 			"duration": "2h 23m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNDhlMzEyNzItMTA5Mi00YWRhLThlNTktYTQyMTA0MDIyNDEyXkEyXkFqcGc@._V1_FMjpg_UX671_.jpg",
@@ -756,6 +823,7 @@
 
 		{
 			"title": "Pirates of The Caribbean: Dead Man's Chest",
+			"director": "Gore Verbinski",
 			"year": "2006",
 			"duration": "2h 31m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BMTcwODc1MTMxM15BMl5BanBnXkFtZTYwMDg1NzY3._V1_FMjpg_UX450_.jpg",
@@ -767,6 +835,7 @@
 
 		{
 			"title": "Pirates of The Caribbean: At World's End",
+			"director": "Gore Verbinski",
 			"year": "2007",
 			"duration": "2h 48m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BMjIyNjkxNzEyMl5BMl5BanBnXkFtZTYwMjc3MDE3._V1_FMjpg_UX450_.jpg",
@@ -778,6 +847,7 @@
 
 		{
 			"title": "The Picture Of Dorian Gray",
+			"director": "Albert Lewin",
 			"year": "1945",
 			"duration": "1h 50m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BYjE0NjNhODQtNTc5OS00NzVhLWI4NDUtOTdiYzY0ZTIyNzg2XkEyXkFqcGc@._V1_FMjpg_UX580_.jpg",
@@ -789,6 +859,7 @@
 
 		{
 			"title": "Rope",
+			"director": "Alfred Hitchcock",
 			"year": "1948",
 			"duration": "1h 20m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BMDM1YzdlZjAtZWFiZS00ZjYyLTgxYzctNzBiYmE0OWFiMGU1XkEyXkFqcGc@._V1_FMjpg_UY2818_.jpg",
@@ -800,6 +871,7 @@
 
 		{
 			"title": "The Secret of NIMH",
+			"director": "Don Bluth",
 			"year": "1982",
 			"duration": "1h 22m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BODAxNzMwYTktZjAyMi00NmNhLWJjMzAtMjkzZjRkYjY2Nzk2XkEyXkFqcGc@._V1_FMjpg_UY2809_.jpg",
@@ -811,6 +883,7 @@
 
 		{
 			"title": "Seven Samurai",
+			"director": "Akira Kurosawa",
 			"year": "1954",
 			"duration": "3h 27m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNjg4YTBhMDUtMWRkOC00YTlhLThiNWEtNTY4MzdjZDk2OGIxXkEyXkFqcGc@._V1_FMjpg_UY1600_.jpg",
@@ -822,6 +895,7 @@
 
 		{
 			"title": "Sinners",
+			"director": "Ryan Coogler",
 			"year": "2025",
 			"duration": "2h 17m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNjIwZWY4ZDEtMmIxZS00NDA4LTg4ZGMtMzUwZTYyNzgxMzk5XkEyXkFqcGc@._V1_FMjpg_UY4096_.jpg",
@@ -833,6 +907,7 @@
 
 		{
 			"title": "Ski School",
+			"director": "Damian Lee",
 			"year": "1990",
 			"duration": "1h 35m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNTA0OThiZWUtNjkyZS00YmY0LTkxYzQtMTkzYzc0NTk3MGU2XkEyXkFqcGc@._V1_FMjpg_UX552_.jpg",
@@ -844,6 +919,7 @@
 
 		{
 			"title": "Skyfall",
+			"director": "Sam Mendes",
 			"year": "2012",
 			"duration": "2h 23m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNjAzMWNkODUtM2FlMi00NzgyLWJhMGUtMWEyNDYyZGFiN2RlXkEyXkFqcGc@._V1_FMjpg_UX691_.jpg",
@@ -855,6 +931,7 @@
 
 		{
 			"title": "Steve Jobs",
+			"director": "Danny Boyle",
 			"year": "2015",
 			"duration": "2h 2m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BMjE0NTA2MTEwOV5BMl5BanBnXkFtZTgwNzg4NzU2NjE@._V1_FMjpg_UX947_.jpg",
@@ -866,6 +943,7 @@
 
 		{
 			"title": "Sunset BLVD.",
+			"director": "Billy Wilder",
 			"year": "1950",
 			"duration": "1h 50m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BMTU0NTkyNzYwMF5BMl5BanBnXkFtZTgwMDU0NDk5MTI@._V1_FMjpg_UX995_.jpg",
@@ -877,6 +955,7 @@
 
 		{
 			"title": "Superman",
+			"director": "James Gunn",
 			"year": "2015",
 			"duration": "2h 9m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BOGMwZGJiM2EtMzEwZC00YTYzLWIxNzYtMmJmZWNlZjgxZTMwXkEyXkFqcGc@._V1_FMjpg_UY2048_.jpg",
@@ -888,6 +967,7 @@
 
 		{
 			"title": "Suspicion",
+			"director": "Alfred Hitchcock",
 			"year": "1941",
 			"duration": "1h 39m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BYjhmZDkzMzItNDc2Yy00MmUxLTgxMWMtNjZhNjM2Mzc3MDcxXkEyXkFqcGc@._V1_FMjpg_UY2794_.jpg",
@@ -900,6 +980,7 @@
 		{
 			"title": "Sweeney Todd",
 			"subtitle": "The Demon Barber of Fleet Street",
+			"director": "Tim Burton",
 			"year": "2007",
 			"duration": "1h 56m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BMTg3NjUxMzM5NV5BMl5BanBnXkFtZTcwMzQ1NjQzMw@@._V1_FMjpg_UY2048_.jpg",
@@ -911,6 +992,7 @@
 
 		{
 			"title": "The Tragedy Of Macbeth",
+			"director": "Joel Coen",
 			"year": "2021",
 			"duration": "1h 45m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BMWE0M2U3NzktZmVkOC00ZTkzLWI2NjEtODA3MmM5NjAyYWUwXkEyXkFqcGc@._V1_FMjpg_UX675_.jpg",
@@ -922,6 +1004,7 @@
 
 		{
 			"title": "The Truman Show",
+			"director": "Peter Weir",
 			"year": "1998",
 			"duration": "1h 43m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNzA3ZjZlNzYtMTdjMy00NjMzLTk5ZGYtMTkyYzNiOGM1YmM3XkEyXkFqcGc@._V1_FMjpg_UY2500_.jpg",
@@ -933,6 +1016,7 @@
 
 		{
 			"title": "The Wiz",
+			"director": "Sidney Lumet",
 			"year": "1978",
 			"duration": "2h 16m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BNDk3MjA2ZjItN2U5Ny00YjgwLTkyN2QtMmZkZDJmYzI1NGVlXkEyXkFqcGc@._V1_FMjpg_UY2904_.jpg",
@@ -944,6 +1028,7 @@
 
 		{
 			"title": "They Shoot Horses, Don't They?",
+			"director": "Sidney Pollack",
 			"year": "1969",
 			"duration": "2 hours",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BMjUwNmFmMzQtNzAzOS00N2M4LWJlMzktYjZmZmY2MDliZTZhXkEyXkFqcGc@._V1_FMjpg_UY3000_.jpg",
@@ -955,6 +1040,7 @@
 
 		{
 			"title": "To Kill A Mockingbird",
+			"director": "Robert Mulligan",
 			"year": "1962",
 			"duration": "2h 9m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BZTlkYWU4MGEtZmQyYi00OWEzLTgzY2EtYzVjOTEzYzAyNTk1XkEyXkFqcGc@._V1_FMjpg_UY2776_.jpg",
@@ -966,6 +1052,7 @@
 
 		{
 			"title": "Together",
+			"director": "Michael Shanks",
 			"year": "2025",
 			"duration": "1h 42m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BZjhhZWQxYjMtYjdmNy00MzBlLWIwZWMtMGNmNGZmMGUzY2QyXkEyXkFqcGc@._V1_FMjpg_UY2048_.jpg",
@@ -977,6 +1064,7 @@
 
 		{
 			"title": "Touch Of Evil",
+			"director": "Orson Welles",
 			"year": "1958",
 			"duration": "1h 35m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BYzBkNTQzODUtNzcxMy00ZGNhLThmOWMtMTcyYzY4ZTU2NDM3XkEyXkFqcGc@._V1_FMjpg_UY1984_.jpg",
@@ -988,6 +1076,7 @@
 
 		{
 			"title": "X",
+			"director": "Ti West",
 			"year": "2022",
 			"duration": "1h 45m",
 			"image-url": "https://m.media-amazon.com/images/M/MV5BODUwYTNhMTMtYWQ5Ny00YTdmLWIxOTAtNDczNzVlYzg2NDFkXkEyXkFqcGc@._V1_FMjpg_UX1013_.jpg",
