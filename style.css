@@ -28,14 +28,41 @@ h1 .subtitle{
 	padding:25px 0px;
 }
 
+#catalog_count{
+	font-size:1.2em;
+}
+
 .movie-block{
 	display:block;
 	width:100%;
-	height:340px;
+	/*height:340px;*/
 	padding:20px;
 	background: white;
 	filter: drop-shadow(0 0 0.75rem rgba(0,0,0,0.1));
 }
+
+
+@media screen and (min-width: 991px) {
+	.movie-block .image-wrapper{
+		display:inline-block;
+		text-align: left;
+	}
+	.movie-block .content{
+		padding: 10px 10px 10px 20px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.movie-block .image-wrapper{
+		display:block;
+		text-align: center;
+	}
+	.movie-block .content{
+		padding: 20px 10px 10px 20px;
+	}
+}
+
+
 
 .movie-block .poster{
 	display:inline-block;
@@ -50,10 +77,20 @@ h1 .subtitle{
 
 .movie-block .content{
 	display:inline-block;
-	width:100%;
-	max-width:1000px;
-	padding:10px 10px 10px 20px;
 	vertical-align:middle;
+}
+
+@media screen and (min-width: 1399px) {
+	.movie-block .content{
+		width:1000px;
+	}
+}
+
+@media screen and (max-width: 1398px) {
+	.movie-block .content{
+		width:100%;
+		max-width:600px;
+	}
 }
 
 .movie-block .director{
@@ -66,6 +103,7 @@ h1 .subtitle{
 	font-size:2em;
 	font-weight:bold;
 	padding-right:10px;
+	line-height:1;
 }
 
 .movie-block .description{
