@@ -37,13 +37,13 @@ h1 .subtitle{
 
 @media screen and (min-width: 1113px) {
 	.top{
-		left:91%;
+		left:92vw;
 	}
 }
 
 @media screen and (max-width: 1112px) {
 	.top{
-		left:70%;
+		left:79vw;
 	}
 }
 
@@ -100,6 +100,18 @@ h1 .subtitle{
 
 .submit-button:hover{
 	background: #d1d1d1;
+}
+
+.featured-heading{
+	display:block;
+	font-size:3em;
+	font-weight:bold;
+	padding-top:50px;
+}
+
+.separator{
+	display:block;
+	padding:50px 0px;
 }
 
 .pad-block{
