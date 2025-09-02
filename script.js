@@ -24,15 +24,55 @@ async function populate(){
 
 }
 
+function genreFilter(){
+  genre_filter = document.getElementById("genre_list").value;
+  console.log(genre_filter);
+  document.getElementById("section").innerHTML = "";
+  found_movies = 0;
+  populate();
+}
+
 
 function populateHours(filter_selection){
 
   if(genre_filter == "all"){
     all_genres(filter_selection);
+  }else if(genre_filter == "action"){
+    action(filter_selection);
+  }else if(genre_filter == "adventure"){
+    adventure(filter_selection);
   }else if(genre_filter == "comedy"){
     comedy(filter_selection);
+  }else if(genre_filter == "crime"){
+    crime(filter_selection);
+  }else if(genre_filter == "documentary"){
+    documentary(filter_selection);
+  }else if(genre_filter == "drama"){
+    drama(filter_selection);
+  }else if(genre_filter == "family"){
+    family(filter_selection);
+  }else if(genre_filter == "fantasy"){
+    fantasy(filter_selection);
   }else if(genre_filter == "horror"){
     horror(filter_selection);
+  }else if(genre_filter == "musical"){
+    musical(filter_selection);
+  }else if(genre_filter == "mystery"){
+    mystery(filter_selection);
+  }else if(genre_filter == "noir"){
+    noir(filter_selection);
+  }else if(genre_filter == "romance"){
+    romance(filter_selection);
+  }else if(genre_filter == "sci-fi"){
+    sci_fi(filter_selection);
+  }else if(genre_filter == "sport"){
+    sport(filter_selection);
+  }else if(genre_filter == "thriller"){
+    thriller(filter_selection);
+  }else if(genre_filter == "war"){
+    war(filter_selection);
+  }else if(genre_filter == "western"){
+    western(filter_selection);
   }
   
 }
@@ -47,26 +87,175 @@ function all_genres(obj){
   for(i = 0;i < obj.length;i++){
     
     if((obj[i].genre).length == 1){
-      genre = (obj[i].genre[0]);
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span>";
     }else if((obj[i].genre).length == 2){
-      genre = (obj[i].genre[0]) + "<span style='color:#000'> / </span>" + (obj[i].genre[1]);
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span><span style='display:inline-block;padding:0px 5px'></span><span class='genre'>" + (obj[i].genre[1]) + "</span>";
     }
 
-    const padBlock = document.createElement('span');
-    padBlock.classList.add('pad-block');
-    const newBlock = document.createElement('div');
-    newBlock.classList.add('movie-block');
-    newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
-    document.getElementById("section").appendChild(padBlock);
-    document.getElementById("section").appendChild(newBlock);
+    //console.log((obj[i].subtitle));
 
-    found_movies = found_movies + 1;
+    if((obj[i].subtitle) !== undefined){
+      const padBlock = document.createElement('span');
+      padBlock.classList.add('pad-block');
+      const newBlock = document.createElement('div');
+      newBlock.classList.add('movie-block');
+      newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+      document.getElementById("section").appendChild(padBlock);
+      document.getElementById("section").appendChild(newBlock);
+      found_movies = found_movies + 1;
+    }else{
+      const padBlock = document.createElement('span');
+      padBlock.classList.add('pad-block');
+      const newBlock = document.createElement('div');
+      newBlock.classList.add('movie-block');
+      newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+      document.getElementById("section").appendChild(padBlock);
+      document.getElementById("section").appendChild(newBlock);
+      found_movies = found_movies + 1;
+    }
 
   }
 
   document.getElementById("catalog_count").innerHTML = found_movies + " Movies Found";
 
 }
+
+function action(obj){
+
+  const section = document.querySelector("section");
+  const myArticle = document.createElement("article");
+  const catalog = document.createElement("p");
+
+  for(i = 0;i < obj.length;i++){
+    
+    if((obj[i].genre).length == 1){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span>";
+
+      if((obj[i].genre[0]) == "Action"){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }else if((obj[i].genre).length == 2){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span><span style='display:inline-block;padding:0px 5px'></span><span class='genre'>" + (obj[i].genre[1]) + "</span>";
+
+      if(((obj[i].genre[0]) == "Action") || ((obj[i].genre[1]) == "Action")){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }
+
+  }
+
+  document.getElementById("catalog_count").innerHTML = found_movies + " Movies Found";
+
+}
+
+function adventure(obj){
+
+  const section = document.querySelector("section");
+  const myArticle = document.createElement("article");
+  const catalog = document.createElement("p");
+
+  for(i = 0;i < obj.length;i++){
+    
+    if((obj[i].genre).length == 1){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span>";
+
+      if((obj[i].genre[0]) == "Adventure"){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }else if((obj[i].genre).length == 2){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span><span style='display:inline-block;padding:0px 5px'></span><span class='genre'>" + (obj[i].genre[1]) + "</span>";
+
+      if(((obj[i].genre[0]) == "Adventure") || ((obj[i].genre[1]) == "Adventure")){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }
+
+  }
+
+  document.getElementById("catalog_count").innerHTML = found_movies + " Movies Found";
+
+}
+
 
 function comedy(obj){
 
@@ -78,45 +267,411 @@ function comedy(obj){
     
     if((obj[i].genre).length == 1){
 
-      genre = (obj[i].genre[0]);
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span>";
 
       if((obj[i].genre[0]) == "Comedy"){
-        found_movies = found_movies + 1;
-        const padBlock = document.createElement('span');
-        padBlock.classList.add('pad-block');
-        const newBlock = document.createElement('div');
-        newBlock.classList.add('movie-block');
-        newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
-        document.getElementById("section").appendChild(padBlock);
-        document.getElementById("section").appendChild(newBlock);
-        document.getElementById("catalog_count").innerHTML = found_movies + " Movies Found";
-        
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
       }
 
     }else if((obj[i].genre).length == 2){
 
-      genre = (obj[i].genre[0]) + "<span style='color:#000'> / </span>" + (obj[i].genre[1]);
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span><span style='display:inline-block;padding:0px 5px'></span><span class='genre'>" + (obj[i].genre[1]) + "</span>";
 
       if(((obj[i].genre[0]) == "Comedy") || ((obj[i].genre[1]) == "Comedy")){
-        found_movies + found_movies + 1;
-        const padBlock = document.createElement('span');
-        padBlock.classList.add('pad-block');
-        const newBlock = document.createElement('div');
-        newBlock.classList.add('movie-block');
-        newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
-        document.getElementById("section").appendChild(padBlock);
-        document.getElementById("section").appendChild(newBlock);
-        document.getElementById("catalog_count").innerHTML = found_movies + " Movies Found";
-        
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
       }
 
     }
 
   }
 
-  
+  document.getElementById("catalog_count").innerHTML = found_movies + " Movies Found";
 
 }
+
+
+function crime(obj){
+
+  const section = document.querySelector("section");
+  const myArticle = document.createElement("article");
+  const catalog = document.createElement("p");
+
+  for(i = 0;i < obj.length;i++){
+    
+    if((obj[i].genre).length == 1){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span>";
+
+      if((obj[i].genre[0]) == "Crime"){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }else if((obj[i].genre).length == 2){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span><span style='display:inline-block;padding:0px 5px'></span><span class='genre'>" + (obj[i].genre[1]) + "</span>";
+
+      if(((obj[i].genre[0]) == "Crime") || ((obj[i].genre[1]) == "Crime")){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }
+
+  }
+
+  document.getElementById("catalog_count").innerHTML = found_movies + " Movies Found";
+
+}
+
+
+function documentary(obj){
+
+  const section = document.querySelector("section");
+  const myArticle = document.createElement("article");
+  const catalog = document.createElement("p");
+
+  for(i = 0;i < obj.length;i++){
+    
+    if((obj[i].genre).length == 1){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span>";
+
+      if((obj[i].genre[0]) == "Documentary"){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }else if((obj[i].genre).length == 2){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span><span style='display:inline-block;padding:0px 5px'></span><span class='genre'>" + (obj[i].genre[1]) + "</span>";
+
+      if(((obj[i].genre[0]) == "Documentary") || ((obj[i].genre[1]) == "Documentary")){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }
+
+  }
+
+  document.getElementById("catalog_count").innerHTML = found_movies + " Movies Found";
+
+}
+
+
+function drama(obj){
+
+  const section = document.querySelector("section");
+  const myArticle = document.createElement("article");
+  const catalog = document.createElement("p");
+
+  for(i = 0;i < obj.length;i++){
+    
+    if((obj[i].genre).length == 1){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span>";
+
+      if((obj[i].genre[0]) == "Drama"){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }else if((obj[i].genre).length == 2){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span><span style='display:inline-block;padding:0px 5px'></span><span class='genre'>" + (obj[i].genre[1]) + "</span>";
+
+      if(((obj[i].genre[0]) == "Drama") || ((obj[i].genre[1]) == "Drama")){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }
+
+  }
+
+  document.getElementById("catalog_count").innerHTML = found_movies + " Movies Found";
+
+}
+
+
+function family(obj){
+
+  const section = document.querySelector("section");
+  const myArticle = document.createElement("article");
+  const catalog = document.createElement("p");
+
+  for(i = 0;i < obj.length;i++){
+    
+    if((obj[i].genre).length == 1){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span>";
+
+      if((obj[i].genre[0]) == "Family"){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }else if((obj[i].genre).length == 2){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span><span style='display:inline-block;padding:0px 5px'></span><span class='genre'>" + (obj[i].genre[1]) + "</span>";
+
+      if(((obj[i].genre[0]) == "Family") || ((obj[i].genre[1]) == "Family")){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }
+
+  }
+
+  document.getElementById("catalog_count").innerHTML = found_movies + " Movies Found";
+
+}
+
+
+
+function fantasy(obj){
+
+  const section = document.querySelector("section");
+  const myArticle = document.createElement("article");
+  const catalog = document.createElement("p");
+
+  for(i = 0;i < obj.length;i++){
+    
+    if((obj[i].genre).length == 1){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span>";
+
+      if((obj[i].genre[0]) == "Fantasy"){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }else if((obj[i].genre).length == 2){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span><span style='display:inline-block;padding:0px 5px'></span><span class='genre'>" + (obj[i].genre[1]) + "</span>";
+
+      if(((obj[i].genre[0]) == "Fantasy") || ((obj[i].genre[1]) == "Fantasy")){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }
+
+  }
+
+  document.getElementById("catalog_count").innerHTML = found_movies + " Movies Found";
+
+}
+
+
 
 function horror(obj){
 
@@ -128,32 +683,684 @@ function horror(obj){
     
     if((obj[i].genre).length == 1){
 
-      genre = (obj[i].genre[0]);
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span>";
 
       if((obj[i].genre[0]) == "Horror"){
-        const padBlock = document.createElement('span');
-        padBlock.classList.add('pad-block');
-        const newBlock = document.createElement('div');
-        newBlock.classList.add('movie-block');
-        newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
-        document.getElementById("section").appendChild(padBlock);
-        document.getElementById("section").appendChild(newBlock);
-        found_movies = found_movies + 1;
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
       }
 
     }else if((obj[i].genre).length == 2){
 
-      genre = (obj[i].genre[0]) + "<span style='color:#000'> / </span>" + (obj[i].genre[1]);
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span><span style='display:inline-block;padding:0px 5px'></span><span class='genre'>" + (obj[i].genre[1]) + "</span>";
 
       if(((obj[i].genre[0]) == "Horror") || ((obj[i].genre[1]) == "Horror")){
-        const padBlock = document.createElement('span');
-        padBlock.classList.add('pad-block');
-        const newBlock = document.createElement('div');
-        newBlock.classList.add('movie-block');
-        newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
-        document.getElementById("section").appendChild(padBlock);
-        document.getElementById("section").appendChild(newBlock);
-        found_movies = found_movies + 1;
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }
+
+  }
+
+  document.getElementById("catalog_count").innerHTML = found_movies + " Movies Found";
+
+}
+
+
+
+function musical(obj){
+
+  const section = document.querySelector("section");
+  const myArticle = document.createElement("article");
+  const catalog = document.createElement("p");
+
+  for(i = 0;i < obj.length;i++){
+    
+    if((obj[i].genre).length == 1){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span>";
+
+      if((obj[i].genre[0]) == "Musical"){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }else if((obj[i].genre).length == 2){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span><span style='display:inline-block;padding:0px 5px'></span><span class='genre'>" + (obj[i].genre[1]) + "</span>";
+
+      if(((obj[i].genre[0]) == "Musical") || ((obj[i].genre[1]) == "Musical")){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }
+
+  }
+
+  document.getElementById("catalog_count").innerHTML = found_movies + " Movies Found";
+
+}
+
+
+
+function mystery(obj){
+
+  const section = document.querySelector("section");
+  const myArticle = document.createElement("article");
+  const catalog = document.createElement("p");
+
+  for(i = 0;i < obj.length;i++){
+    
+    if((obj[i].genre).length == 1){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span>";
+
+      if((obj[i].genre[0]) == "Mystery"){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }else if((obj[i].genre).length == 2){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span><span style='display:inline-block;padding:0px 5px'></span><span class='genre'>" + (obj[i].genre[1]) + "</span>";
+
+      if(((obj[i].genre[0]) == "Mystery") || ((obj[i].genre[1]) == "Mystery")){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }
+
+  }
+
+  document.getElementById("catalog_count").innerHTML = found_movies + " Movies Found";
+
+}
+
+
+
+function noir(obj){
+
+  const section = document.querySelector("section");
+  const myArticle = document.createElement("article");
+  const catalog = document.createElement("p");
+
+  for(i = 0;i < obj.length;i++){
+    
+    if((obj[i].genre).length == 1){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span>";
+
+      if((obj[i].genre[0]) == "Noir"){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }else if((obj[i].genre).length == 2){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span><span style='display:inline-block;padding:0px 5px'></span><span class='genre'>" + (obj[i].genre[1]) + "</span>";
+
+      if(((obj[i].genre[0]) == "Noir") || ((obj[i].genre[1]) == "Noir")){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }
+
+  }
+
+  document.getElementById("catalog_count").innerHTML = found_movies + " Movies Found";
+
+}
+
+
+
+function romance(obj){
+
+  const section = document.querySelector("section");
+  const myArticle = document.createElement("article");
+  const catalog = document.createElement("p");
+
+  for(i = 0;i < obj.length;i++){
+    
+    if((obj[i].genre).length == 1){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span>";
+
+      if((obj[i].genre[0]) == "Romance"){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }else if((obj[i].genre).length == 2){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span><span style='display:inline-block;padding:0px 5px'></span><span class='genre'>" + (obj[i].genre[1]) + "</span>";
+
+      if(((obj[i].genre[0]) == "Romance") || ((obj[i].genre[1]) == "Romance")){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }
+
+  }
+
+  document.getElementById("catalog_count").innerHTML = found_movies + " Movies Found";
+
+}
+
+
+
+function sci_fi(obj){
+
+  const section = document.querySelector("section");
+  const myArticle = document.createElement("article");
+  const catalog = document.createElement("p");
+
+  for(i = 0;i < obj.length;i++){
+    
+    if((obj[i].genre).length == 1){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span>";
+
+      if((obj[i].genre[0]) == "Sci-Fi"){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }else if((obj[i].genre).length == 2){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span><span style='display:inline-block;padding:0px 5px'></span><span class='genre'>" + (obj[i].genre[1]) + "</span>";
+
+      if(((obj[i].genre[0]) == "Sci-Fi") || ((obj[i].genre[1]) == "Sci-Fi")){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }
+
+  }
+
+  document.getElementById("catalog_count").innerHTML = found_movies + " Movies Found";
+
+}
+
+
+
+function sport(obj){
+
+  const section = document.querySelector("section");
+  const myArticle = document.createElement("article");
+  const catalog = document.createElement("p");
+
+  for(i = 0;i < obj.length;i++){
+    
+    if((obj[i].genre).length == 1){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span>";
+
+      if((obj[i].genre[0]) == "Sport"){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }else if((obj[i].genre).length == 2){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span><span style='display:inline-block;padding:0px 5px'></span><span class='genre'>" + (obj[i].genre[1]) + "</span>";
+
+      if(((obj[i].genre[0]) == "Sport") || ((obj[i].genre[1]) == "Sport")){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }
+
+  }
+
+  document.getElementById("catalog_count").innerHTML = found_movies + " Movies Found";
+
+}
+
+
+
+function thriller(obj){
+
+  const section = document.querySelector("section");
+  const myArticle = document.createElement("article");
+  const catalog = document.createElement("p");
+
+  for(i = 0;i < obj.length;i++){
+    
+    if((obj[i].genre).length == 1){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span>";
+
+      if((obj[i].genre[0]) == "Thriller"){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }else if((obj[i].genre).length == 2){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span><span style='display:inline-block;padding:0px 5px'></span><span class='genre'>" + (obj[i].genre[1]) + "</span>";
+
+      if(((obj[i].genre[0]) == "Thriller") || ((obj[i].genre[1]) == "Thriller")){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }
+
+  }
+
+  document.getElementById("catalog_count").innerHTML = found_movies + " Movies Found";
+
+}
+
+
+
+function war(obj){
+
+  const section = document.querySelector("section");
+  const myArticle = document.createElement("article");
+  const catalog = document.createElement("p");
+
+  for(i = 0;i < obj.length;i++){
+    
+    if((obj[i].genre).length == 1){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span>";
+
+      if((obj[i].genre[0]) == "War"){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }else if((obj[i].genre).length == 2){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span><span style='display:inline-block;padding:0px 5px'></span><span class='genre'>" + (obj[i].genre[1]) + "</span>";
+
+      if(((obj[i].genre[0]) == "War") || ((obj[i].genre[1]) == "War")){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }
+
+  }
+
+  document.getElementById("catalog_count").innerHTML = found_movies + " Movies Found";
+
+}
+
+
+
+function western(obj){
+
+  const section = document.querySelector("section");
+  const myArticle = document.createElement("article");
+  const catalog = document.createElement("p");
+
+  for(i = 0;i < obj.length;i++){
+    
+    if((obj[i].genre).length == 1){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span>";
+
+      if((obj[i].genre[0]) == "Western"){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
+      }
+
+    }else if((obj[i].genre).length == 2){
+
+      genre = "<span class='genre'>" + (obj[i].genre[0]) + "</span><span style='display:inline-block;padding:0px 5px'></span><span class='genre'>" + (obj[i].genre[1]) + "</span>";
+
+      if(((obj[i].genre[0]) == "Western") || ((obj[i].genre[1]) == "Western")){
+        if((obj[i].subtitle) !== undefined){
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+" <span class='subtitle'>"+(obj[i].subtitle)+"</span></span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }else{
+          const padBlock = document.createElement('span');
+          padBlock.classList.add('pad-block');
+          const newBlock = document.createElement('div');
+          newBlock.classList.add('movie-block');
+          newBlock.innerHTML = "<div class='image-wrapper'><img class='poster' src="+(obj[i].image_url)+"></div>"+"<div class='content'><span class='director'>"+(obj[i].director)+"</span>"+"<br><span class='title'>"+(obj[i].title)+"</span>"+"<span class='duration'>("+(obj[i].duration)+")</span>"+"<p class='description'>"+(obj[i].description)+"</p>"+"<span class='genres'>"+genre+"</span>"+"</div>";
+          document.getElementById("section").appendChild(padBlock);
+          document.getElementById("section").appendChild(newBlock);
+          found_movies = found_movies + 1;
+        }
       }
 
     }
@@ -167,8 +1374,56 @@ function horror(obj){
 
 
 
+function scroll_to_top(){
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
 
 
 
 
+
+// Get the vertical scroll position of the document
+//const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+
+//console.log(`User has scrolled ${scrollTop} pixels down the page.`);
+
+
+
+
+
+
+
+
+
+
+
+
+let ticking = false;
+let scrollTop;
+
+window.addEventListener("scroll", function (e) {
+  scrollTop =
+    window.pageYOffset !== undefined
+      ? window.pageYOffset
+      : (document.documentElement || document.body.parentNode || document.body)
+          .scrollTop;
+
+  if (!ticking) {
+    window.requestAnimationFrame(function () {
+      //document.getElementById("scroll-value").innerHTML = Math.round(scrollTop);
+      console.log(scrollTop);
+      if(scrollTop > 850){
+        document.getElementById("top-button").style.opacity = "1";
+      }else{
+        document.getElementById("top-button").style.opacity = "0";
+      }
+      ticking = false;
+    });
+
+    ticking = true;
+  }
+});
 
