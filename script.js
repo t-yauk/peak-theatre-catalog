@@ -38,42 +38,61 @@ function genreFilter(){
 function populateHours(filter_selection){
 
   if(genre_filter == "all"){
+    document.getElementById("list_title").innerHTML = "All Movies";
     all_genres(filter_selection);
   }else if(genre_filter == "action"){
+    document.getElementById("list_title").innerHTML = "Action Movies";
     action(filter_selection);
   }else if(genre_filter == "adventure"){
+    document.getElementById("list_title").innerHTML = "Adventure Movies";
     adventure(filter_selection);
   }else if(genre_filter == "comedy"){
+    document.getElementById("list_title").innerHTML = "Comedy Movies";
     comedy(filter_selection);
   }else if(genre_filter == "crime"){
+    document.getElementById("list_title").innerHTML = "Crime Movies";
     crime(filter_selection);
   }else if(genre_filter == "documentary"){
+    document.getElementById("list_title").innerHTML = "Documentaries";
     documentary(filter_selection);
   }else if(genre_filter == "drama"){
+    document.getElementById("list_title").innerHTML = "Drama Movies";
     drama(filter_selection);
   }else if(genre_filter == "family"){
+    document.getElementById("list_title").innerHTML = "Family Movies";
     family(filter_selection);
   }else if(genre_filter == "fantasy"){
+    document.getElementById("list_title").innerHTML = "Fantasy Movies";
     fantasy(filter_selection);
   }else if(genre_filter == "horror"){
+    document.getElementById("list_title").innerHTML = "Horror Movies";
     horror(filter_selection);
   }else if(genre_filter == "musical"){
+    document.getElementById("list_title").innerHTML = "Musicals";
     musical(filter_selection);
   }else if(genre_filter == "mystery"){
+    document.getElementById("list_title").innerHTML = "Mystery Movies";
     mystery(filter_selection);
   }else if(genre_filter == "noir"){
+    document.getElementById("list_title").innerHTML = "Noir Movies";
     noir(filter_selection);
   }else if(genre_filter == "romance"){
+    document.getElementById("list_title").innerHTML = "Romance Movies";
     romance(filter_selection);
   }else if(genre_filter == "sci-fi"){
+    document.getElementById("list_title").innerHTML = "Sci-Fi Movies";
     sci_fi(filter_selection);
   }else if(genre_filter == "sport"){
+    document.getElementById("list_title").innerHTML = "Sport Movies";
     sport(filter_selection);
   }else if(genre_filter == "thriller"){
+    document.getElementById("list_title").innerHTML = "Thriller Movies";
     thriller(filter_selection);
   }else if(genre_filter == "war"){
+    document.getElementById("list_title").innerHTML = "War Movies";
     war(filter_selection);
   }else if(genre_filter == "western"){
+    document.getElementById("list_title").innerHTML = "Westerns";
     western(filter_selection);
   }
   
