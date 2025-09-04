@@ -92,10 +92,10 @@ h1 .subtitle{
 	font-weight: bold;
 	text-align:center;
 	text-transform:uppercase;
-	background: #efefef;
+	background: rgb(44,112,244);
 	border-style: solid;
   	border-color: #d1d1d1;
-  	border-width: 0 1px 0 1px;
+  	border-width: 0;
 }
 
 .submit-button:hover{
