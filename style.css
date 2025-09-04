@@ -43,7 +43,7 @@ h1 .subtitle{
 
 @media screen and (max-width: 1112px) {
 	.top{
-		left:79vw;
+		left:72vw;
 	}
 }
 
@@ -112,6 +112,7 @@ h1 .subtitle{
 .featured-heading{
 	display:block;
 	font-size:3em;
+	line-height:1;
 	font-weight:bold;
 	padding-top:50px;
 }
