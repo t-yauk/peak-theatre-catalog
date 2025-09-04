@@ -69,7 +69,8 @@ h1 .subtitle{
 .pk-dropdown{
 	display:inline-block;
 	position: relative;
-	width:150px;
+	width:45%;
+	max-width:200px;
 	height:100px;
 	padding:10px;
 	font-size:1.3em;
@@ -85,7 +86,8 @@ h1 .subtitle{
 .submit-button{
 	display:inline-block;
 	position: relative;
-	width:150px;
+	width:45%;
+	max-width:200px;
 	height:100px;
 	padding:10px;
 	font-size:1.5em;
