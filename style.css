@@ -83,6 +83,10 @@ h1 .subtitle{
   	cursor:pointer;
 }
 
+.pk-dropdown:focus{
+	outline:0;
+}
+
 .submit-button{
 	display:inline-block;
 	position: relative;
