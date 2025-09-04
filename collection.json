@@ -320,7 +320,7 @@
 			"duration": "2h 25m",
 			"image_url": "https://m.media-amazon.com/images/M/MV5BNmM0Yzc1ZjAtZTg4My00NDI3LWEwMzAtY2ZkNzMxMWMwOTFlXkEyXkFqcGc@._V1_FMjpg_UY3600_.jpg",
 			"description": "In May of 2020, a standoff between a small-town sheriff and mayor sparks a powder keg as neighbor is pitted against neighbor in Eddington, New Mexico.",
-			"featured": "true",
+			"featured": "false",
 			"theatre_optimized": "true",
 			"genre": ["Western", "Thriller"]
 		},
