@@ -1784,6 +1784,18 @@
 		},
 
 		{
+			"title": "Weapons",
+			"director": "Zach Cregger",
+			"year": "2025",
+			"duration": "2h 8m",
+			"image_url": "https://m.media-amazon.com/images/M/MV5BNTBhNWJjZWItYzY3NS00M2NkLThmOWYtYTlmNzBmN2UxZWFjXkEyXkFqcGc@._V1_FMjpg_UY2048_.jpg",
+			"description": "When all but one child from the same class mysteriously vanish on the same night at exactly the same time, a community is left questioning who or what is behind their disappearance.",
+			"featured": "true",
+			"theatre_optimized": "true",
+			"genre": ["Horror", "Mystery"]
+		},
+
+		{
 			"title": "Whiplash",
 			"director": "Damien Chazelle",
 			"year": "2014",
